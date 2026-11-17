@@ -10,8 +10,8 @@ Phần mềm hướng tới việc tối ưu hóa quy trình vận hành cho cá
 
 ## 2. Các công cụ sử dụng
 * **Ngôn ngữ lập trình:** Python (3.12+)
-* **Testing Framework:** `unittest` (thư viện chuẩn Python, cấu trúc AAA: Arrange - Act - Assert)
-* **Công cụ quản lý dự án & Mã nguồn:** Git, GitHub (Issues, Projects, Pull Requests).
+* **Testing Framework:** `unittest` (thư viện  Python, cấu trúc AAA: Arrange - Act - Assert)
+* **Công cụ quản lý dự án & Mã nguồn:** Git, GitHub.
 
 ---
 
@@ -21,9 +21,9 @@ Phần mềm hướng tới việc tối ưu hóa quy trình vận hành cho cá
 | :---: | :--- | :---: | :--- | :--- |
 | 1 | Hoàng Thái Minh | 25S1020067 | **Scrum Master** | [@hoangthaiminh2007-dot](https://github.com/hoangthaiminh2007-dot) |
 | 2 | Nguyễn Đinh Mạnh | 25S1020065 | Developer | [@manhhk6782-wq](https://github.com/manhhk6782-wq) |
-| 3 | Chương Le | *Đang cập nhật* | Developer | [@chuonglevan186-prog](https://github.com/chuonglevan186-prog) |
-| 4 | *(Thành viên 4)* | *Đang cập nhật* | Developer | [@tdaohuu4-glitch](https://github.com/tdaohuu4-glitch) |
-| 5 | *(Thành viên 5)* | *Đang cập nhật* | Developer | [@dangkiet-web](https://github.com/dangkiet-web) |
+| 3 | Lê Văn Chương | *Đang cập nhật* | Developer | [@chuonglevan186-prog](https://github.com/chuonglevan186-prog) |
+| 4 | Đào Hữu Thiện | *Đang cập nhật* | Developer | [@tdaohuu4-glitch](https://github.com/tdaohuu4-glitch) |
+| 5 | Đặng Tuấn Kiệt | *Đang cập nhật* | Developer | [@dangkiet-web](https://github.com/dangkiet-web) |
 
 ---
 
