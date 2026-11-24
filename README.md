@@ -1,4 +1,4 @@
-# Hệ thống Quản lý và Đặt món Quán Cơm Chiên
+# Hệ thống Quản lý và Đặt món Quán Cơm Chiên (Nhóm 5)
 ---
 
 ## 1. Tầm nhìn sản phẩm (Product Vision)
@@ -8,14 +8,24 @@ Phần mềm hướng tới việc tối ưu hóa quy trình vận hành cho cá
 
 ---
 
-## 2. Các công cụ sử dụng
-* **Ngôn ngữ lập trình:** Python (3.12+)
-* **Testing Framework:** `unittest` (thư viện  Python, cấu trúc AAA: Arrange - Act - Assert)
-* **Công cụ quản lý dự án & Mã nguồn:** Git, GitHub.
+## 2. Công nghệ & Công cụ sử dụng (Tech Stack)
+* **Ngôn ngữ lập trình:** Python (`3.12+`)
+* **Web Framework (Sprint 1+):** Flask (`>=3.0,<4.0`) + Jinja2 (HTML/CSS/JS)
+* **Cơ sở dữ liệu (Sprint 1+):** SQLite (`sqlite3`)
+* **Testing Framework:** `unittest` (thư viện chuẩn Python, cấu trúc AAA: Arrange - Act - Assert)
+* **Quản lý dự án & Mã nguồn:** Git, GitHub, [Trello Board Nhóm 5](https://trello.com/b/YFeM5jjH/nh%C3%B3m-5-h%E1%BB%87-th%E1%BB%91ng-qu%E1%BA%A3n-l%C3%BD-c%C6%A1m-chi%C3%AAn)
 
 ---
 
-## 3. Danh sách thành viên nhóm (5 thành viên)
+## 3. Tài liệu Dự án (Sprint 0)
+* 📋 **Product Backlog (10 User Stories - 47 SP):** [docs/PRODUCT_BACKLOG.md](docs/PRODUCT_BACKLOG.md)
+* 🏗️ **Kiến trúc Hệ thống & CSDL (3-Layer + MVC):** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+* 🗓️ **Kế hoạch & Phân công Sprint 0:** [docs/SPRINT_0_PLAN.md](docs/SPRINT_0_PLAN.md)
+* 📌 **Bảng quản lý công việc Trello:** https://trello.com/b/YFeM5jjH/nh%C3%B3m-5-h%E1%BB%87-th%E1%BB%91ng-qu%E1%BA%A3n-l%C3%BD-c%C6%A1m-chi%C3%AAn
+
+---
+
+## 4. Danh sách thành viên nhóm (5 thành viên)
 
 | STT | Họ và tên | MSSV | Vai trò trong Scrum | Tài khoản GitHub |
 | :---: | :--- | :---: | :--- | :--- |
@@ -27,19 +37,30 @@ Phần mềm hướng tới việc tối ưu hóa quy trình vận hành cho cá
 
 ---
 
-## 4. Phân công Sprint 1 Mini (Thực hành Chương 4)
+## 5. Tiến độ Core Logic (Thực hành Chương 4)
 
 Mỗi thành viên tạo **nhánh `feature/...` riêng từ `main`** (không code trực tiếp trên `main`), viết code logic + **tối thiểu 2 Unit Test theo cấu trúc AAA**, tạo **Pull Request** và **Review chéo** cho đồng đội:
 
-| Issue | Nhiệm vụ (Technical Task) | Thành viên phụ trách | Nhánh Git | File Code & Unit Test | Review chéo cho | Ước lượng |
-| :---: | :--- | :--- | :--- | :--- | :--- | :---: |
-| **#1** | Quản lý thực đơn món ăn (Menu Management) | `@hoangthaiminh2007-dot` | `feature/menu-management` | `src/menu_service.py`<br>`tests/test_menu.py` | `@manhhk6782-wq` | 2h |
-| **#2** | Đặt món tại bàn cho khách hàng (Table Ordering) | `@manhhk6782-wq` | `feature/table-ordering` | `src/order_service.py`<br>`tests/test_order.py` | `@chuonglevan186-prog` | 3h |
-| **#3** | Theo dõi trạng thái chế biến món tại bếp (Kitchen Display) | `@chuonglevan186-prog` | `feature/kitchen-display` | `src/kitchen_service.py`<br>`tests/test_kitchen.py` | `@tdaohuu4-glitch` | 2.5h |
-| **#4** | Thanh toán và In/Xuất hóa đơn (Checkout & Billing) | `@tdaohuu4-glitch` | `feature/checkout-billing` | `src/billing_service.py`<br>`tests/test_billing.py` | `@dangkiet-web` | 2.5h |
-| **#5** | Báo cáo và Thống kê doanh thu (Revenue Reporting) | `@dangkiet-web` | `feature/revenue-reporting` | `src/report_service.py`<br>`tests/test_report.py` | `@hoangthaiminh2007-dot` | 2h |
+| Issue | Nhiệm vụ (Technical Task) | Thành viên phụ trách | Nhánh Git | File Code & Unit Test | Review chéo cho | Trạng thái |
+| :---: | :--- | :--- | :--- | :--- | :--- | :--- |
+| **#1** | Quản lý thực đơn món ăn (Menu Management) | `@hoangthaiminh2007-dot` | `feature/menu-management` | `src/menu_service.py`<br>`tests/test_menu.py` | `@manhhk6782-wq` | **Đã xong** (PR #6 merged, 5 tests) |
+| **#2** | Đặt món tại bàn cho khách hàng (Table Ordering) | `@manhhk6782-wq` | `feature/table-ordering` | `src/order_service.py`<br>`tests/test_order.py` | `@chuonglevan186-prog` | **Chưa làm** (Chuyển sang Sprint 0 To Do) |
+| **#3** | Theo dõi trạng thái chế biến món tại bếp (Kitchen Display) | `@chuonglevan186-prog` | `feature/kitchen-display` | `src/kitchen_service.py`<br>`tests/test_kitchen.py` | `@tdaohuu4-glitch` | **Đã xong** (PR #9 merged, 4 tests) |
+| **#4** | Thanh toán và In/Xuất hóa đơn (Checkout & Billing) | `@tdaohuu4-glitch` | `feature/checkout-billing` | `src/billing_service.py`<br>`tests/test_billing.py` | `@dangkiet-web` | **Đã xong code & PR #7** *(cần đóng Issue #4)* |
+| **#5** | Báo cáo và Thống kê doanh thu (Revenue Reporting) | `@dangkiet-web` | `feature/revenue-reporting` | `src/report_service.py`<br>`tests/test_report.py` | `@hoangthaiminh2007-dot` | **Đã xong code & PR #8** *(cần đóng Issue #5)* |
 
-### Chạy toàn bộ Unit Test
+---
+
+## 6. Hướng dẫn Clone, Cài đặt Môi trường & Chạy Unit Test
+
 ```bash
+# 1. Clone repository về máy (hoặc git pull origin main nếu đã clone)
+git clone https://github.com/hoangthaiminh2007-dot/NHAPMON_CNPM_NHOM-5_QUAN-LY-COM-CHIEN.git
+cd NHAPMON_CNPM_NHOM-5_QUAN-LY-COM-CHIEN
+
+# 2. Cài đặt dependencies
+pip install -r requirements.txt
+
+# 3. Chạy toàn bộ Unit Test
 python -m unittest discover -s tests -v
 ```
