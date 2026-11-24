@@ -44,14 +44,16 @@ flowchart TB
 
 ---
 
-## 3. Cấu trúc Thư mục Dự kiến (Từ Sprint 1)
+## 3. Cấu trúc Thư mục Dự án (Khởi tạo tại Sprint 0, Mở rộng ở Sprint 1+)
 
-Hiện tại ở Sprint 0, repo đang lưu các module core logic Chương 4 tại `src/` và `tests/`. Khi bắt đầu Sprint 1, nhóm mở rộng theo cấu trúc chuẩn sau mà vẫn giữ tương thích với bộ kiểm thử:
+Khung dự án đã được khởi tạo theo cấu trúc 3 lớp chuẩn hóa để cả 5 thành viên có sẵn file riêng (`src/routes/*_routes.py` và `src/*_service.py`), hạn chế xung đột khi làm song song từ Sprint 1:
 
 ```text
 NHAPMON_CNPM_NHOM-5_QUAN-LY-COM-CHIEN/
-├── app.py                      # Điểm khởi chạy ứng dụng Web Flask
-├── requirements.txt            # Danh sách thư viện Python (Flask)
+├── .env.example                # Mẫu biến môi trường cục bộ
+├── .gitignore                  # Bỏ qua venv, pycache, file SQLite (*.db) và instance/
+├── app.py                      # Điểm khởi chạy ứng dụng Web Flask (create_app)
+├── requirements.txt            # Danh sách thư viện Python (Flask>=3.0,<4.0)
 ├── README.md                   # Thông tin tổng quan, thành viên, hướng dẫn cài đặt
 ├── docs/                       # Tài liệu dự án (Backlog, Kiến trúc, Sprint 0, ERD, Wireframes)
 │   ├── PRODUCT_BACKLOG.md
@@ -59,23 +61,41 @@ NHAPMON_CNPM_NHOM-5_QUAN-LY-COM-CHIEN/
 │   └── SPRINT_0_PLAN.md
 ├── src/                        # Mã nguồn Backend
 │   ├── __init__.py
+│   ├── config.py               # Cấu hình ứng dụng (SECRET_KEY, DATABASE_PATH)
 │   ├── menu_service.py         # (Đã có - PR #6) Nghiệp vụ Thực đơn
-│   ├── order_service.py        # (Issue #2) Nghiệp vụ Đặt món & Bàn ăn
+│   ├── order_service.py        # (Đã có - PR #10) Nghiệp vụ Đặt món & Bàn ăn
 │   ├── kitchen_service.py      # (Đã có - PR #9) Nghiệp vụ Trạng thái bếp
 │   ├── billing_service.py      # (Đã có - PR #7) Nghiệp vụ Thanh toán & Hóa đơn
 │   ├── report_service.py       # (Đã có - PR #8) Nghiệp vụ Báo cáo doanh thu
 │   ├── auth_service.py         # (Sprint 2) Nghiệp vụ Đăng nhập & Phân quyền
-│   ├── database/               # (Sprint 0/1) Kết nối SQLite & schema.sql
-│   └── routes/                 # (Sprint 1) Flask Blueprints cho từng chức năng
-├── templates/                  # (Sprint 1) Giao diện HTML (Jinja2)
-├── static/                     # (Sprint 1) CSS, JavaScript, hình ảnh món ăn
-└── tests/                      # Unit Test theo cấu trúc AAA (unittest)
+│   ├── database/               # Tầng truy xuất CSDL SQLite
+│   │   ├── __init__.py
+│   │   ├── db.py               # get_connection, init_db, get_db_summary
+│   │   └── schema.sql          # Định nghĩa 6 bảng & dữ liệu mẫu bàn ăn, thực đơn
+│   └── routes/                 # Tầng Controller (Flask Blueprints cho từng phân hệ)
+│       ├── __init__.py
+│       ├── helpers.py          # Danh mục module & helper tạo Blueprint khung
+│       ├── main_routes.py      # Trang chủ (/) và API kiểm tra hệ thống (/health)
+│       ├── menu_routes.py      # (/menu) Quản lý thực đơn — Hoàng Thái Minh
+│       ├── order_routes.py     # (/orders) Đặt món tại bàn — Nguyễn Đinh Mạnh
+│       ├── kitchen_routes.py   # (/kitchen) Màn hình bếp — Lê Văn Chương
+│       ├── billing_routes.py   # (/billing) Thanh toán & Hóa đơn — Đào Hữu Thiện
+│       └── report_routes.py    # (/reports) Thống kê Doanh thu — Đặng Tuấn Kiệt
+├── templates/                  # Giao diện HTML (Jinja2)
+│   ├── base.html
+│   ├── index.html
+│   └── module_placeholder.html
+├── static/                     # Tài nguyên tĩnh (CSS, JS, ảnh)
+│   └── css/
+│       └── style.css
+└── tests/                      # Unit Test & Smoke Test theo cấu trúc AAA (unittest)
     ├── __init__.py
-    ├── test_menu.py            # (Đã có - 5 tests)
-    ├── test_order.py           # (Issue #2)
-    ├── test_kitchen.py         # (Đã có - 4 tests)
-    ├── test_billing.py         # (Đã có - 4 tests)
-    └── test_report.py          # (Đã có - 8 tests)
+    ├── test_app_setup.py       # (Sprint 0 - 4 tests) Kiểm thử DB 6 bảng, /, /health, 5 routes
+    ├── test_menu.py            # (Đã có - PR #6 - 5 tests)
+    ├── test_order.py           # (Đã có - PR #10 - 6 tests)
+    ├── test_kitchen.py         # (Đã có - PR #9 - 4 tests)
+    ├── test_billing.py         # (Đã có - PR #7 - 4 tests)
+    └── test_report.py          # (Đã có - PR #8 - 8 tests)
 ```
 
 ---

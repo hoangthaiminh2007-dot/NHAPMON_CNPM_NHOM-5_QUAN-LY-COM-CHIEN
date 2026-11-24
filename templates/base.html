@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Quản lý Quán Cơm Chiên — Nhóm 5{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-brand" href="{{ url_for('main.home') }}">
+        Quán Cơm Chiên · Nhóm 5
+      </a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <ul class="nav-list">
+          <li>
+            <a href="{{ url_for('main.home') }}" {% if request.path == '/' %}aria-current="page"{% endif %}>
+              Trang chủ
+            </a>
+          </li>
+          <li>
+            <a href="/menu" {% if request.path.startswith('/menu') %}aria-current="page"{% endif %}>
+              Thực đơn
+            </a>
+          </li>
+          <li>
+            <a href="/orders" {% if request.path.startswith('/orders') %}aria-current="page"{% endif %}>
+              Đặt món
+            </a>
+          </li>
+          <li>
+            <a href="/kitchen" {% if request.path.startswith('/kitchen') %}aria-current="page"{% endif %}>
+              Bếp
+            </a>
+          </li>
+          <li>
+            <a href="/billing" {% if request.path.startswith('/billing') %}aria-current="page"{% endif %}>
+              Thanh toán
+            </a>
+          </li>
+          <li>
+            <a href="/reports" {% if request.path.startswith('/reports') %}aria-current="page"{% endif %}>
+              Doanh thu
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Hệ thống Quản lý &amp; Đặt món Quán Cơm Chiên — Nhóm 5 (Sprint 0 Skeleton)</p>
+      <p><a href="/health">Kiểm tra API <code>/health</code></a></p>
+    </div>
+  </footer>
+</body>
+</html>
