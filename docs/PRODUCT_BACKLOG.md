@@ -21,12 +21,12 @@ Tài liệu này đồng bộ 1-1 với cột **Product Backlog** trên bảng T
 | Mã US | Tên User Story | Độ ưu tiên | Story Points | Dự kiến phụ trách | Sprint dự kiến | Trạng thái hiện tại |
 | :---: | :--- | :---: | :---: | :--- | :---: | :--- |
 | **US-01** | Quản lý thực đơn các món cơm chiên | P1 - Cao | 5 | Hoàng Thái Minh (`@hoangthaiminh2007-dot`) | Sprint 1 | Đã có core logic Chương 4 (`src/menu_service.py`); Sprint 1 tích hợp Web + SQLite |
-| **US-02** | Nhân viên đặt món nhanh tại bàn cho khách | P1 - Cao | 8 | Nguyễn Đinh Mạnh (`@manhhk6782-wq`) | Sprint 1 | Chờ hoàn thành core logic Chương 4 (Issue #2), sau đó tích hợp Web + SQLite |
+| **US-02** | Nhân viên đặt món nhanh tại bàn cho khách | P1 - Cao | 8 | Nguyễn Đình Mạnh (`@manhhk6782-wq`) | Sprint 1 | Chờ hoàn thành core logic Chương 4 (Issue #2), sau đó tích hợp Web + SQLite |
 | **US-03** | Màn hình bếp theo dõi & cập nhật trạng thái chế biến | P1 - Cao | 5 | Lê Văn Chương (`@chuonglevan186-prog`) | Sprint 1 | Đã có core logic Chương 4 (`src/kitchen_service.py`); Sprint 1 tích hợp Web + SQLite |
 | **US-04** | Thanh toán đơn hàng & xuất hóa đơn cho bàn ăn | P1 - Cao | 5 | Đào Hữu Thiện (`@tdaohuu4-glitch`) | Sprint 1 | Đã có core logic Chương 4 (`src/billing_service.py`); Sprint 1 tích hợp Web + SQLite |
 | **US-05** | Chủ quán xem báo cáo & thống kê doanh thu ngày/tháng | P1 - Cao | 5 | Đặng Tuấn Kiệt (`@dangkiet-web`) | Sprint 1 | Đã có core logic Chương 4 (`src/report_service.py`); Sprint 1 tích hợp Web + SQLite |
 | **US-06** | Đăng nhập & phân quyền tài khoản nhân sự | P1 - Cao | 5 | Hoàng Thái Minh (`@hoangthaiminh2007-dot`) | Sprint 2 | Chưa bắt đầu (Planned) |
-| **US-07** | Quản lý danh sách & trạng thái bàn ăn | P2 - TB | 3 | Nguyễn Đinh Mạnh (`@manhhk6782-wq`) | Sprint 2 | Chưa bắt đầu (Planned) |
+| **US-07** | Quản lý danh sách & trạng thái bàn ăn | P2 - TB | 3 | Nguyễn Đình Mạnh (`@manhhk6782-wq`) | Sprint 2 | Chưa bắt đầu (Planned) |
 | **US-08** | Chỉnh sửa, gọi thêm hoặc hủy món trong đơn đang mở | P2 - TB | 5 | Lê Văn Chương (`@chuonglevan186-prog`) | Sprint 2 | Chưa bắt đầu (Planned) |
 | **US-09** | Áp dụng khuyến mãi / giảm giá & phụ thu khi thanh toán | P2 - TB | 3 | Đào Hữu Thiện (`@tdaohuu4-glitch`) | Sprint 2 | Chưa bắt đầu (Planned) |
 | **US-10** | Tra cứu lịch sử hóa đơn & xuất báo cáo CSV | P3 - Thấp | 3 | Đặng Tuấn Kiệt (`@dangkiet-web`) | Sprint 2 | Chưa bắt đầu (Planned) |
@@ -39,7 +39,7 @@ Tài liệu này đồng bộ 1-1 với cột **Product Backlog** trên bảng T
 | Thành viên | Tài khoản GitHub | Các US phụ trách | Số US | Tổng Story Points |
 | :--- | :--- | :--- | :---: | :---: |
 | Hoàng Thái Minh | `@hoangthaiminh2007-dot` | US-01 (5), US-06 (5) | 2 | **10 SP** |
-| Nguyễn Đinh Mạnh | `@manhhk6782-wq` | US-02 (8), US-07 (3) | 2 | **11 SP** |
+| Nguyễn Đình Mạnh | `@manhhk6782-wq` | US-02 (8), US-07 (3) | 2 | **11 SP** |
 | Lê Văn Chương | `@chuonglevan186-prog` | US-03 (5), US-08 (5) | 2 | **10 SP** |
 | Đào Hữu Thiện | `@tdaohuu4-glitch` | US-04 (5), US-09 (3) | 2 | **8 SP** |
 | Đặng Tuấn Kiệt | `@dangkiet-web` | US-05 (5), US-10 (3) | 2 | **8 SP** |
@@ -58,7 +58,7 @@ Tài liệu này đồng bộ 1-1 với cột **Product Backlog** trên bảng T
   4. Hỗ trợ lọc danh sách món theo danh mục và trạng thái còn món.
 
 ### US-02: Nhân viên đặt món nhanh tại bàn cho khách
-- **Độ ưu tiên:** P1 - Cao | **Story Points:** 8 | **Phụ trách:** Nguyễn Đinh Mạnh | **Sprint:** 1
+- **Độ ưu tiên:** P1 - Cao | **Story Points:** 8 | **Phụ trách:** Nguyễn Đình Mạnh | **Sprint:** 1
 - **User Story:** Là một nhân viên phục vụ, tôi muốn chọn số bàn và chọn các món cơm chiên khách gọi ngay trên hệ thống, để chuyển đơn xuống bếp nhanh chóng và tránh ghi nhầm món.
 - **Tiêu chí chấp nhận (AC):**
   1. Cho phép chọn bàn trống, thêm nhiều món cơm chiên/đồ uống, nhập số lượng và ghi chú (ít cay, thêm trứng, không hành...).
@@ -103,7 +103,7 @@ Tài liệu này đồng bộ 1-1 với cột **Product Backlog** trên bảng T
   4. Hiển thị thông báo lỗi rõ ràng khi sai tài khoản/mật khẩu và cho phép đăng xuất.
 
 ### US-07: Quản lý danh sách & trạng thái bàn ăn
-- **Độ ưu tiên:** P2 - Trung bình | **Story Points:** 3 | **Phụ trách:** Nguyễn Đinh Mạnh | **Sprint:** 2
+- **Độ ưu tiên:** P2 - Trung bình | **Story Points:** 3 | **Phụ trách:** Nguyễn Đình Mạnh | **Sprint:** 2
 - **User Story:** Là một nhân viên phục vụ/chủ quán, tôi muốn quản lý danh sách bàn ăn và xem trực quan trạng thái từng bàn, để sắp xếp chỗ ngồi nhanh và tránh nhầm lẫn bàn đang có khách.
 - **Tiêu chí chấp nhận (AC):**
   1. Cho phép thêm, sửa, xóa số bàn và sức chứa (số ghế) của từng bàn.

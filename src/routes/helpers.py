@@ -19,7 +19,7 @@ SPRINT_1_MODULES: list[dict[str, str]] = [
         "title": "Đặt món tại bàn",
         "story_id": "US-02 (8 SP)",
         "route": "/orders",
-        "owner": "Nguyễn Đinh Mạnh",
+        "owner": "Nguyễn Đình Mạnh",
         "github": "@manhhk6782-wq",
         "service_file": "src/order_service.py",
         "route_file": "src/routes/order_routes.py",

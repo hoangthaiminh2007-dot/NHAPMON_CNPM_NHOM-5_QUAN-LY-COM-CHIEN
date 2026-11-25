@@ -77,7 +77,7 @@ NHAPMON_CNPM_NHOM-5_QUAN-LY-COM-CHIEN/
 │       ├── helpers.py          # Danh mục module & helper tạo Blueprint khung
 │       ├── main_routes.py      # Trang chủ (/) và API kiểm tra hệ thống (/health)
 │       ├── menu_routes.py      # (/menu) Quản lý thực đơn — Hoàng Thái Minh
-│       ├── order_routes.py     # (/orders) Đặt món tại bàn — Nguyễn Đinh Mạnh
+│       ├── order_routes.py     # (/orders) Đặt món tại bàn — Nguyễn Đình Mạnh
 │       ├── kitchen_routes.py   # (/kitchen) Màn hình bếp — Lê Văn Chương
 │       ├── billing_routes.py   # (/billing) Thanh toán & Hóa đơn — Đào Hữu Thiện
 │       └── report_routes.py    # (/reports) Thống kê Doanh thu — Đặng Tuấn Kiệt
