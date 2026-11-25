@@ -21,6 +21,7 @@ Phần mềm hướng tới việc tối ưu hóa quy trình vận hành cho cá
 * 📋 **Product Backlog (10 User Stories - 47 SP):** [docs/PRODUCT_BACKLOG.md](docs/PRODUCT_BACKLOG.md)
 * 🏗️ **Kiến trúc Hệ thống & CSDL (3-Layer + MVC):** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 * 🗓️ **Kế hoạch & Phân công Sprint 0:** [docs/SPRINT_0_PLAN.md](docs/SPRINT_0_PLAN.md)
+* 🎨 **Wireframe 5 màn hình chính (S0-04):** [docs/wireframes/](docs/wireframes/)
 * 📌 **Bảng quản lý công việc Trello:** https://trello.com/b/YFeM5jjH/nh%C3%B3m-5-h%E1%BB%87-th%E1%BB%91ng-qu%E1%BA%A3n-l%C3%BD-c%C6%A1m-chi%C3%AAn
 
 ---
