@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Tổng quan Sprint 0 — Quán Cơm Chiên (Nhóm 5){% endblock %}
+
+{% block content %}
+<section class="hero" aria-labelledby="hero-heading">
+  <p class="badge">Sprint 0 · Khởi tạo &amp; Kiến trúc hệ thống</p>
+  <h1 id="hero-heading">Hệ thống Quản lý và Đặt món Quán Cơm Chiên</h1>
+  <p class="hero-lead">
+    Khung ứng dụng Web áp dụng kiến trúc 3 lớp (<strong>Flask + Jinja2 + SQLite + unittest</strong>),
+    kế thừa 5 module nghiệp vụ Chương 4 và sẵn sàng cho cả 5 thành viên phát triển tính năng từ <strong>Sprint 1</strong>.
+  </p>
+</section>
+
+<section class="status-section" aria-labelledby="db-heading">
+  <h2 id="db-heading">Trạng thái Môi trường &amp; Cơ sở Dữ liệu SQLite</h2>
+  <div class="stats-grid">
+    <article class="card stat-card">
+      <h3>Bảng dữ liệu đã khởi tạo</h3>
+      <p class="stat-value">{{ db_summary.table_count }} / 6 bảng</p>
+      <p class="stat-meta">{{ db_summary.tables | join(', ') }}</p>
+    </article>
+    <article class="card stat-card">
+      <h3>Dữ liệu mẫu Bàn ăn</h3>
+      <p class="stat-value">{{ db_summary.dining_tables_count }} bàn</p>
+      <p class="stat-meta">Khởi tạo từ <code>src/database/schema.sql</code></p>
+    </article>
+    <article class="card stat-card">
+      <h3>Dữ liệu mẫu Thực đơn</h3>
+      <p class="stat-value">{{ db_summary.menu_items_count }} món</p>
+      <p class="stat-meta">Món cơm chiên &amp; đồ uống mẫu sẵn sàng</p>
+    </article>
+  </div>
+</section>
+
+<section class="modules-section" aria-labelledby="modules-heading">
+  <h2 id="modules-heading">5 Phân hệ Kế hoạch Sprint 1</h2>
+  <div class="module-grid">
+    {% for mod in modules %}
+    <article class="card module-card">
+      <header class="card-header">
+        <span class="story-tag">{{ mod.story_id }}</span>
+        <h3>
+          <a class="card-link" href="{{ mod.route }}">{{ mod.title }}</a>
+        </h3>
+      </header>
+      <div class="card-content">
+        <p>{{ mod.summary }}</p>
+        <ul class="meta-list">
+          <li><strong>Phụ trách:</strong> {{ mod.owner }} (<code>{{ mod.github }}</code>)</li>
+          <li><strong>Route:</strong> <code>{{ mod.route_file }}</code></li>
+          <li><strong>Service:</strong> <code>{{ mod.service_file }}</code></li>
+        </ul>
+      </div>
+      <footer class="card-footer">
+        <span class="status-pill">Khung Sprint 0 · Mở xem →</span>
+      </footer>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

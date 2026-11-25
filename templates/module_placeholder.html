@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ module.title }} — Khung Sprint 0{% endblock %}
+
+{% block content %}
+<article class="card placeholder-card" aria-labelledby="module-heading">
+  <header class="card-header">
+    <p class="badge">Khung Sprint 0 — Sẵn sàng phát triển ở Sprint 1</p>
+    <h1 id="module-heading">{{ module.title }}</h1>
+  </header>
+
+  <div class="card-content">
+    <p>{{ module.summary }}</p>
+    <dl class="detail-list">
+      <div>
+        <dt>User Story</dt>
+        <dd>{{ module.story_id }}</dd>
+      </div>
+      <div>
+        <dt>Thành viên phụ trách</dt>
+        <dd>{{ module.owner }} (<code>{{ module.github }}</code>)</dd>
+      </div>
+      <div>
+        <dt>File Route (Controller)</dt>
+        <dd><code>{{ module.route_file }}</code></dd>
+      </div>
+      <div>
+        <dt>File Nghiệp vụ (Service Chương 4)</dt>
+        <dd><code>{{ module.service_file }}</code></dd>
+      </div>
+    </dl>
+  </div>
+
+  <footer class="card-footer">
+    <a class="btn-back" href="{{ url_for('main.home') }}">← Quay lại Trang chủ Sprint 0</a>
+  </footer>
+</article>
+{% endblock %}
