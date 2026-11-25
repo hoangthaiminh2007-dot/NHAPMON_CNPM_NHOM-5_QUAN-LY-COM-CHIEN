@@ -34,7 +34,7 @@ Phần mềm hướng tới việc tối ưu hóa quy trình vận hành cho cá
 | 2 | Nguyễn Đình Mạnh | 25S1020065 | Developer | [@manhhk6782-wq](https://github.com/manhhk6782-wq) |
 | 3 | Lê Văn Chương | 25S1080009 | Developer | [@chuonglevan186-prog](https://github.com/chuonglevan186-prog) |
 | 4 | Đào Hữu Thiện | 25S1020101 | Developer | [@tdaohuu4-glitch](https://github.com/tdaohuu4-glitch) |
-| 5 | Đặng Tuấn Kiệt | *Đang cập nhật* | Developer | [@dangkiet-web](https://github.com/dangkiet-web) |
+| 5 | Đặng Tuấn Kiệt | 25S1020055 | Developer | [@dangkiet-web](https://github.com/dangkiet-web) |
 
 ---
 
